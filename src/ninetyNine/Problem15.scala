@@ -6,15 +6,7 @@ object Problem15 {
   }
   
   def duplicateN[A](n: Int, ls: List[A]): List[A] = {
-      return ls.flatMap(x => listify(n, x))
-  }
-  
-  def listify[A](n: Int, x: A): List[A] = {
-      var ls = List[A]()
-      for (i <- (0 until n)) {
-          ls = x :: ls
-      }
-      return ls
+      return ls.flatMap(x => (1 to n).map(y => x))
   }
   
 }
