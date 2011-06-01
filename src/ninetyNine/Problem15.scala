@@ -6,7 +6,7 @@ object Problem15 {
   }
   
   def duplicateN[A](n: Int, ls: List[A]): List[A] = {
-      return ls.flatMap(x => (1 to n).map(y => x))
+      return ls.flatMap(x => List.fill(n)(x))
   }
   
 }
